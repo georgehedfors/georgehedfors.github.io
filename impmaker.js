@@ -15,12 +15,13 @@ function initialize() {
             dbid: dbid.value,
             position: event.latLng,
             map: map,
+            draggable: true,
             title: currtitle,
             type: currtitle
       });
 
       m = markers.push(marker) - 1;
-      
+
       var contentString = '<div id="content">' +
                           '<div id="siteNotice">' +
                           '</div>' +
@@ -46,7 +47,7 @@ function initialize() {
             markers.splice(markers.indexOf(marker));
       });
   });
-} 
+}
 
 function guid() {
   function s4() {
@@ -74,13 +75,13 @@ function genExport() {
             HostedAircraftRecords: [],
             Orientation: 0.0,
             LoadoutID: 0,
-            Member_DBID: markers[i].dbid,
-            Latitude: markers[i].position.F,
+            Member_DBID: int(markers[i].dbid),
+            Latitude: markers[i].position.A,
             MemberName: markers[i].title,
             ParentGroupName: null,
-            MemberType: "facility",
+            MemberType: "Command_Core.Facility",
             Member_GUID: markers[i].guid,
-            Longitude: markers[i].position.A 
+            Longitude: markers[i].position.F
         }
 
         inst.MemberRecords.push(member);
