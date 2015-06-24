@@ -75,7 +75,7 @@ function genExport() {
             HostedAircraftRecords: [],
             Orientation: 0.0,
             LoadoutID: 0,
-            Member_DBID: int(markers[i].dbid),
+            Member_DBID: Number(markers[i].dbid),
             Latitude: markers[i].position.A,
             MemberName: markers[i].title,
             ParentGroupName: null,
