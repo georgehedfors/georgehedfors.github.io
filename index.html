@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Command Modern Air/Naval Warfare: Import Designer</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+      #panel {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        margin-left: -180px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="data.json"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="impmaker.js"></script>
+  </head>
+  <body>
+    <div id="panel">
+        <p>
+        <div id="mapName"><b>Default map name</b></div>
+        <a href="" id="export" download="generated.inst">Export</a>
+        <button onClick="loadSave();" type="button">Load/Save</button>
+        </p><p>
+        <select onChange="javascript:currtitle=dbid.options[ dbid.options.selectedIndex ].text;" id="dbid"></select>
+        </p>
+    </div>
+    <div id="welcome"></div>
+    <div id="map-canvas"></div>
+  </body>
+</html>
