@@ -70,6 +70,12 @@ function genExport() {
         MemberRecords: []
     };
 
+    var parent = null;
+
+    if (grouped.checked) {
+        parent = mapName.value;
+    }
+
     for (var i in markers) {
         var member = {
             HostedAircraftRecords: [],
@@ -78,7 +84,7 @@ function genExport() {
             Member_DBID: Number(markers[i].dbid),
             Latitude: markers[i].position.A,
             MemberName: markers[i].title,
-            ParentGroupName: null,
+            ParentGroupName: parent,
             MemberType: "Command_Core.Facility",
             Member_GUID: markers[i].guid,
             Longitude: markers[i].position.F
