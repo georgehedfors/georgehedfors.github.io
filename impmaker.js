@@ -5,7 +5,7 @@ var currtitle = "Generic marker";
 
 function initialize() {
   map = new google.maps.Map(document.getElementById('map-canvas'), {
-    zoom: 8,
+    zoom: 2,
     center: {lat: 0, lng: 0}
   });
 
