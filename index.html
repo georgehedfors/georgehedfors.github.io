@@ -23,6 +23,16 @@
     </style>
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-2529621-7', 'auto');
+        ga('send', 'pageview');
+
+    </script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <script src="data.json"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -32,9 +42,8 @@
   <body>
     <div id="panel">
         <p>
-        <div id="mapName"><b>Default map name</b></div>
+        Map name <input id="mapName" type="text">
         <a href="" id="export" download="generated.inst">Export</a>
-        <button onClick="loadSave();" type="button">Load/Save</button>
         </p><p>
         <select onChange="javascript:currtitle=dbid.options[ dbid.options.selectedIndex ].text;" id="dbid"></select>
         </p>
